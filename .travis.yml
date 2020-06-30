@@ -13,4 +13,4 @@ before_script: pip install docker-compose
 
 #script to test and lint code before travis automation begins
 script:
-    - docker-compose run app sh -c 'python manage.py makemigrations && migrate'
+    - sudo docker-compose run app sh -c 'python manage.py makemigrations && migrate'
