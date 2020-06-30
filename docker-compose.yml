@@ -1,0 +1,18 @@
+version: '3'
+
+#service called app
+services:
+    app:
+        #setting context to root directory
+        build: 
+            context: .
+        ports:
+            - '8000:8000'
+        #maps app directory in project to app directory in docker image and updates docker when app directory is changed
+        volumes: 
+            - ./app:/app
+        #runs the development server on all available ip's on docker container on port 8000
+        command: >
+            sh -c 'python manage.py runserver 0.0.0.0:8000'
+
+            
