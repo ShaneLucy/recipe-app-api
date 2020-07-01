@@ -27,7 +27,8 @@ SECRET_KEY = ')-mp)im!(0#z#5!h=6j(*s0)=x!dk4a8z+2x-a*d2hz#8zx%$='
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '0.0.0.0'
+    '0.0.0.0',
+    '127.0.0.1'
 ]
 
 
@@ -40,7 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework.authtoken',
     'core',
+    'user',
 ]
 
 MIDDLEWARE = [
